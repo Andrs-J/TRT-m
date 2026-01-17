@@ -292,7 +292,7 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
   .activity-row .time {
     display: flex; /* Skift til fleksibel layout */
     flex-direction: column; /* Skift til vertikal visning */
-    align-items: center; /* Centrer teksten horisontalt */
+    align-items: left; /* Centrer teksten horisontalt */
     width: var(--time-col-width) !important; /* Anvend en fleksibel bredde */
     margin-right: 0 !important; /* Fjern unødvendigt margin */
     line-height: 1.2; /* Plads mellem linjerne */
