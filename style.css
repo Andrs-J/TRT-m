@@ -277,17 +277,17 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
 /* For skærmstørrelser under 600px */
 /* For skærmstørrelser under 600px (smartphones) */
 @media (max-width: 600px) {
+  :root {
+    --time-col-width: 160px; /* Reducer tidens kolonnebredde til halvdelen */
+  }
+
   .activity-row {
-    gap: 10px; /* Halver mellemrummet mellem tidspunkt og aktivitet/sted */
+    gap: 10px !important; /* Reducér mellemrummet mellem tid og aktivitet */
   }
 
   .activity-row .time {
-    width: auto; /* Reducer bredden på tidspunktet på små enheder */
-    margin-right: 5px; /* Reducer mellemrummet yderligere */
-  }
-
-  .activity-row .title-place {
-    gap: 4px; /* Reducer mellemrummet mellem aktivitetens navn og sted */
+    width: var(--time-col-width) !important; /* Brug den nye bredde */
+    margin-right: 5px !important;
   }
 }
 
