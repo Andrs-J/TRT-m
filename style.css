@@ -113,20 +113,19 @@ main{
   box-shadow: 0 5px 18px rgba(0,0,0,0.38);
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:20px;
   min-height:96px;
   transition: opacity 300ms ease, transform 200ms ease, filter 300ms ease;
 }
 
 /* VENSTRE: Tid */
-.activity-row .time {
-  margin-right: 10px; /* Dette er mellemrummet mellem tiden og næste kolonne */
-  flex-shrink: 0; /* Sørger for, at tiden ikke bliver mindre på mindre skærme */
-}
-
-.activity-row .title-place {
-  flex: 1; /* Fylder den resterende tilgængelige plads */
-  margin-left: 0; /* Sørger for, at der ikke er ekstra margin til venstre */
+.activity-row .time{
+  width: var(--time-col-width);
+  min-width:160px;
+  font-size:var(--fs-row-time);
+  font-weight:800;
+  color:var(--accent);
+  letter-spacing:0.6px;
 }
 
 /* MIDTEN: titel + sted */
@@ -264,20 +263,6 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
   }
   .activity-row{ padding:10px; min-height:64px; gap:12px; }
   .activity-row .time{ width:var(--time-col-width); font-size:var(--fs-row-time); }
-}
-
-@media (max-width: 600px) {
-  .activity-row {
-    gap: 5px; /* Reducer mellemrum yderligere på små skærme */
-  }
-
-  .activity-row .time {
-    margin-right: 5px; /* Mindre margin mellem tid og tekst */
-  }
-
-  .activity-row .title-place {
-    margin-left: 0;
-  }
 }
 
 /* Dynamisk status for aktivitet */
