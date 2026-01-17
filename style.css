@@ -275,9 +275,19 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
 }
 
 /* For skærmstørrelser under 600px */
+/* For skærmstørrelser under 600px (smartphones) */
 @media (max-width: 600px) {
-  .status {
-    font-size: 1.2rem; /* Mindre tekststørrelse for mobile enheder */
+  .activity-row {
+    gap: 10px; /* Halver mellemrummet mellem tidspunkt og aktivitet/sted */
+  }
+
+  .activity-row .time {
+    width: auto; /* Reducer bredden på tidspunktet på små enheder */
+    margin-right: 5px; /* Reducer mellemrummet yderligere */
+  }
+
+  .activity-row .title-place {
+    gap: 4px; /* Reducer mellemrummet mellem aktivitetens navn og sted */
   }
 }
 
