@@ -51,20 +51,23 @@ header {
 }
 
 .activities-section {
-  width: 100%; /* Strækker sig til hele bredden */
-  margin: 0; /* Fjern al unødvendig margin */
+  width: 100%; /* Strækker hele sektionen til full-width */
+  margin: 0 auto; /* Centerer sektionen, hvis skærmen er bred */
   display: flex;
   flex-direction: column;
-  gap: var(--spacing);
-  padding: 0; /* Ingen ekstra afstand indeni sektionen */
+  gap: var(--spacing); /* Beholder afstand mellem kort */
+  padding: 0 1rem; /* Lidt indrykning på små enheder */
 }
 
 .activity-card {
-  width: 100%; /* Sørger for, at bokse fylder hele bredden */
+  width: 100%; /* Aktivitetens bredde tilpasses sektionen */
+  max-width: 700px; /* Forhindrer for brede kort på tablets og desktops */
   background: var(--card);
   border-radius: 8px;
   padding: var(--spacing);
+  margin: 0 auto; /* Centerer kortet på større skærme */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Sørg for teksten er venstrejusteret */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
