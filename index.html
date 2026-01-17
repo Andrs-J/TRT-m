@@ -2,21 +2,27 @@
 <html lang="da">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aktiviteter – TRT</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aktiviteter – TRT (Mobilversion)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="current-date" id="currentDate">--</div>
-    <div class="current-time" id="clock">--:--</div>
+    <div class="brand">
+      <div id="currentDate" class="current-date" aria-live="polite"></div>
+    </div>
+    <div class="meta">
+      <div id="clock" aria-live="polite" class="clock">--:--</div>
+    </div>
   </header>
 
   <main>
-    <section id="activities" class="activities-section">
-      <!-- Aktiviteter vil blive indsat dynamisk her -->
+    <section class="hero" aria-labelledby="activities-title">
+      <div id="activities" class="activities-list" aria-live="polite">
+        <!-- Aktiviteter indsættes dynamisk her -->
+      </div>
+      <div id="message" class="message" aria-live="polite"></div>
     </section>
-    <div id="message" class="message"></div>
   </main>
 
   <footer>
