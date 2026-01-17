@@ -278,16 +278,16 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
 /* For skærmstørrelser under 600px (smartphones) */
 @media (max-width: 600px) {
   :root {
-    --time-col-width: 160px; /* Reducer tidens kolonnebredde til halvdelen */
+    --time-col-width: 0px; /* Reducer tidens kolonnebredde til halvdelen */
   }
 
   .activity-row {
-    gap: 10px !important; /* Reducér mellemrummet mellem tid og aktivitet */
+    gap: 00px !important; /* Reducér mellemrummet mellem tid og aktivitet */
   }
 
   .activity-row .time {
     width: var(--time-col-width) !important; /* Brug den nye bredde */
-    margin-right: 5px !important;
+    margin-right: -20px !important;
   }
 }
 
