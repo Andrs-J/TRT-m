@@ -266,6 +266,20 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
   .activity-row .time{ width:var(--time-col-width); font-size:var(--fs-row-time); }
 }
 
+@media (max-width: 600px) {
+  .activity-row {
+    gap: 5px; /* Reducer mellemrum yderligere på små skærme */
+  }
+
+  .activity-row .time {
+    margin-right: 5px; /* Mindre margin mellem tid og tekst */
+  }
+
+  .activity-row .title-place {
+    margin-left: 0;
+  }
+}
+
 /* Dynamisk status for aktivitet */
 .status {
   font-size: 2.5rem;
