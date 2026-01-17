@@ -119,13 +119,14 @@ main{
 }
 
 /* VENSTRE: Tid */
-.activity-row .time{
-  width: var(--time-col-width);
-  min-width:160px;
-  font-size:var(--fs-row-time);
-  font-weight:800;
-  color:var(--accent);
-  letter-spacing:0.6px;
+.activity-row .time {
+  margin-right: 10px; /* Dette er mellemrummet mellem tiden og næste kolonne */
+  flex-shrink: 0; /* Sørger for, at tiden ikke bliver mindre på mindre skærme */
+}
+
+.activity-row .title-place {
+  flex: 1; /* Fylder den resterende tilgængelige plads */
+  margin-left: 0; /* Sørger for, at der ikke er ekstra margin til venstre */
 }
 
 /* MIDTEN: titel + sted */
