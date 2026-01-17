@@ -141,7 +141,19 @@ function renderActivities(list) {
 
     const timeDiv = document.createElement("div");
     timeDiv.className = "time";
-    timeDiv.textContent = `${formatTime(item.start)} - ${formatTime(item.end)}`;
+    
+    const start = document.createElement("div");
+    start.textContent = formatTime(item.start); // Starttidspunkt
+    timeDiv.appendChild(start);
+    
+    const separator = document.createElement("div");
+    separator.textContent = "-"; // Bindestreg mellem start og slut tid
+    timeDiv.appendChild(separator);
+    
+    const end = document.createElement("div");
+    end.textContent = formatTime(item.end); // Sluttidspunkt
+    timeDiv.appendChild(end);
+    
     row.appendChild(timeDiv);
 
     const tp = document.createElement("div");
