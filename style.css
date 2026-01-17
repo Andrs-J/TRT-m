@@ -278,23 +278,24 @@ footer{ padding:12px var(--gutter-side); color:var(--muted); font-size:14px; bor
 /* For skærmstørrelser under 600px (smartphones) */
 @media (max-width: 600px) {
   :root {
-    --time-col-width: 0px; /* Reducer tidens kolonnebredde til halvdelen */
+    --time-col-width: auto; /* Gør tidens kolonne fleksibel for små skærme */
   }
 
   .activity-row {
-    gap: 00px !important; /* Reducér mellemrummet mellem tid og aktivitet */
+    gap: 5px !important; /* Reducér mellemrummet mellem tid og aktivitet */
+  }
+
+  .status {
+    font-size: 1.2rem; /* Mindre tekststørrelse */
   }
 
   .activity-row .time {
-    width: var(--time-col-width) !important; /* Brug den nye bredde */
-    margin-right: -20px !important;
-  }
-}
-
-/* For smartphones og små skærme */
-@media (max-width: 600px) {
-  .status {
-    font-size: 1.2rem; /* Mindre tekststørrelse */
+    display: flex; /* Skift til fleksibel layout */
+    flex-direction: column; /* Skift til vertikal visning */
+    align-items: center; /* Centrer teksten horisontalt */
+    width: var(--time-col-width) !important; /* Anvend en fleksibel bredde */
+    margin-right: 0 !important; /* Fjern unødvendigt margin */
+    line-height: 1.2; /* Plads mellem linjerne */
   }
 }
 
